@@ -1,3 +1,43 @@
+// Avantio configuration
+const AVANTIO_BASE = 'https://demo-651.avantio.dev/it';
+const AVANTIO_TYPE_MAP = {
+  '1':  'appartamenti-c1',
+  '2':  'ville-c2',
+  '14': 'studi-c14',
+  '19': 'case-c19',
+  '20': 'villette-c20',
+};
+
+function buildAvantioUrl(checkin, checkout, typeId, guests) {
+  const typeSlug = typeId ? `affitti-${AVANTIO_TYPE_MAP[typeId]}` : 'affitti-affitti-p0';
+  let path = `/affitti/${typeSlug}`;
+  if (guests) path += `/${guests}-persone`;
+  if (checkin) {
+    const ci = formatAvantioDate(checkin);
+    path += `/disponibile-da-${ci}`;
+  }
+  if (checkout) {
+    const co = formatAvantioDate(checkout);
+    path += `/fino-${co}`;
+  }
+  return `${AVANTIO_BASE}${path}/`;
+}
+
+function formatAvantioDate(dateStr) {
+  const [y, m, d] = dateStr.split('-');
+  return `${d}-${m}-${y}`;
+}
+
+function doSearch() {
+  const checkin = document.getElementById('sf-checkin').value;
+  const checkout = document.getElementById('sf-checkout').value;
+  const typeId = document.getElementById('sf-type').value;
+  const guests = document.getElementById('sf-guests').value;
+  const url = buildAvantioUrl(checkin, checkout, typeId, guests);
+  window.open(url, '_blank');
+  return false;
+}
+
 // Navbar scroll
 const nav = document.getElementById('navbar');
 function updateNav() {
