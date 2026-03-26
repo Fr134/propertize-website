@@ -1,59 +1,16 @@
 # Propertize
 
-> Propertize S.r.l. is an Italian vacation rental company managing short-term rentals (affitti brevi) across Sardinia, Milan, and Sicily.
+> Propertize S.r.l. is an Italian vacation rental company managing short-term rentals (affitti brevi) across Sardinia, Milan, and Sicily. Based in Milan, properties published on 50+ international platforms.
 
-## About
-Propertize S.r.l. manages curated vacation properties including villas, apartments, and houses. Based in Milan (Piazza della Repubblica 19), the company focuses on providing authentic local experiences with the philosophy "Beyond Stays — vivi come un local." Properties are published across 50+ international booking platforms with dynamic pricing strategies.
+- [Homepage](https://propertize.it/): Main landing page with destinations, search, and booking
+- [All Properties](https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/): Browse all vacation rentals
+- [Experiences](https://demo-651.avantio.dev/it/esperienze-sardegna-lombardia/): Culinary and outdoor experiences
+- [Gift Cards](https://demo-651.avantio.dev/it/gift-cards-sardegna-lombardia/): Gift card purchase
+- [About Us](https://demo-651.avantio.dev/it/chi-siamo/): Company information
+- [For Owners](https://demo-651.avantio.dev/it/proprietari/): Property management services
+- [General Conditions](https://demo-651.avantio.dev/it/condizioni-generali/): Booking terms and cancellation policy
+- [Privacy Policy](https://demo-651.avantio.dev/it/politica-di-privacy/): Data protection
 
-## Destinations
-- Golfo Aranci, Sardinia
-- Costa Smeralda, Sardinia
-- Alghero, Sardinia
-- Villasimius, Sardinia
-- Nuoro & Barbagia, Sardinia
-- Milan, Lombardy
+## Optional
 
-## Property Types
-- Ville (Villas)
-- Appartamenti (Apartments)
-- Case (Houses)
-- Villette (Small villas)
-- Studi (Studios)
-
-## Services for Guests
-- Short-term vacation rentals across Sardinia and Milan
-- Equipped kitchens, fast Wi-Fi, quality linens included
-- Welcome kit with local products
-- Multilingual 24/7 guest assistance
-- Gift cards for vacation experiences
-- Culinary and outdoor experiences in Sardinia
-
-## Services for Property Owners
-- Free property valuation
-- Property optimization (professional photos, interior design)
-- Bureaucratic management (permits, registrations, taxes)
-- Publication on 50+ international booking platforms
-- Dynamic pricing strategy
-- 24/7 multilingual guest assistance
-- Professional cleaning and maintenance
-
-## Cancellation Policy
-- 30+ days before arrival: 10% charge
-- 29-7 days before: 50% charge
-- Less than 7 days: 100% charge
-
-## Payment Methods
-- Bank transfer, Mastercard, Visa
-
-## Contact
-- Phone: +39 351 7700425
-- WhatsApp: +39 351 7700425
-- Email: info@propertize.it
-- Address: Piazza della Repubblica 19, Milano, Italy
-- Hours: Mon-Fri, 9:00-18:00
-- Website: https://propertize.it
-
-## Social Media
-- Instagram: https://www.instagram.com/propertize.it/
-- Facebook: https://www.facebook.com/Propertize1
-- LinkedIn: https://it.linkedin.com/company/propertizesrl
+- [Full content version of this file](https://propertize.it/llms-full.txt): Complete company information, FAQs, services, and owner case studies
