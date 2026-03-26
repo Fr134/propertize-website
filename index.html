@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Propertize – Beyond Stays</title>
-<meta name="description" content="Propertize: affitti brevi di qualità in Sardegna e Milano. Ville, appartamenti e esperienze uniche per vivere come un local.">
+<meta name="description" content="Propertize: affitti brevi di qualit&agrave; in Sardegna e Milano. Ville, appartamenti e esperienze uniche per vivere come un local.">
 <link rel="icon" type="image/png" href="images/logo-propertize.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +19,11 @@
     <img class="nav-logo-svg" src="images/logo-propertize.svg" alt="Propertize logo">
   </a>
   <ul class="nav-links">
-    <li><a href="#editorial">Chi siamo</a></li>
+    <li><a href="#hero">Home</a></li>
     <li><a href="#destinations">Destinazioni</a></li>
-    <li><a href="#discover">Case</a></li>
-    <li><a href="#gift">Gift Card</a></li>
-    <li class="nav-cta"><a href="index.php">Proprietari</a></li>
+    <li><a href="https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/" target="_blank">Case</a></li>
+    <li><a href="https://demo-651.avantio.dev/it/gift-cards-sardegna-lombardia/" target="_blank">Gift Card</a></li>
+    <li class="nav-cta"><a href="https://demo-651.avantio.dev/it/proprietari/" target="_blank">Proprietari</a></li>
   </ul>
   <div class="nav-hamburger" onclick="this.classList.toggle('open')">
     <span></span><span></span><span></span>
@@ -33,60 +33,89 @@
 <!-- HERO SLIDESHOW -->
 <section id="hero">
   <div class="hero-slideshow" id="heroSlideshow">
-    <div class="hero-slide active" data-location="Villasimius, Sardegna">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85&auto=format&fit=crop" alt="Villasimius — spiaggia del sud-est" loading="eager">
-    </div>
-    <div class="hero-slide" data-location="Cagliari, Sardegna">
-      <img src="https://images.unsplash.com/photo-1519558260268-cde7e03a0152?w=1920&q=85&auto=format&fit=crop" alt="Cagliari — panorama della città" loading="lazy">
+    <div class="hero-slide active" data-location="Costa Smeralda, Sardegna">
+      <img src="images/hero-costa-smeralda.jpg" alt="Costa Smeralda — mare cristallino" loading="eager">
     </div>
     <div class="hero-slide" data-location="Golfo di Orosei, Sardegna">
-      <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1920&q=85&auto=format&fit=crop" alt="Golfo di Orosei — calette tra le falesie" loading="lazy">
+      <img src="images/hero-golfo-orosei.jpg" alt="Golfo di Orosei — calette tra le falesie" loading="lazy">
     </div>
     <div class="hero-slide" data-location="Golfo Aranci, Sardegna">
-      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=85&auto=format&fit=crop" alt="Golfo Aranci — acque turchesi della costa nord-est" loading="lazy">
+      <img src="images/hero-golfo-aranci.jpg" alt="Golfo Aranci — acque turchesi della costa nord-est" loading="lazy">
     </div>
     <div class="hero-slide" data-location="Costa Verde, Sardegna">
-      <img src="https://images.unsplash.com/photo-1509233725247-49e657c54213?w=1920&q=85&auto=format&fit=crop" alt="Costa Verde — dune dorate e mare aperto" loading="lazy">
+      <img src="images/hero-costa-verde.jpg" alt="Costa Verde — dune dorate e mare aperto" loading="lazy">
     </div>
     <div class="hero-slide" data-location="La Pelosa, Stintino">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85&auto=format&fit=crop" alt="La Pelosa — sabbia bianca e acque cristalline" loading="lazy">
+      <img src="images/hero-la-pelosa.jpg" alt="La Pelosa — sabbia bianca e acque cristalline" loading="lazy">
+    </div>
+    <div class="hero-slide" data-location="Alghero, Sardegna">
+      <img src="images/hero-alghero.jpg" alt="Alghero — Riviera del Corallo" loading="lazy">
+    </div>
+    <div class="hero-slide" data-location="Milano, Lombardia">
+      <img src="images/hero-milano.jpg" alt="Milano — skyline e design" loading="lazy">
     </div>
   </div>
 
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">Sardegna &middot; Milano</p>
-    <h1 class="hero-title">Scopri la tua prossima<br><em>esperienza</em></h1>
-    <div class="hero-search">
+    <p class="hero-eyebrow">Sardegna &middot; Lombardia &middot; Sicilia</p>
+    <h1 class="hero-title">Sentiti a casa,<br><em>ovunque tu sia.</em></h1>
+    <form class="hero-search" id="searchForm" onsubmit="return doSearch()">
       <div class="sf">
-        <span class="sf-label">Dove</span>
-        <span class="sf-val">Tutte le destinazioni</span>
+        <label class="sf-label" for="sf-checkin">Check-in</label>
+        <input type="date" id="sf-checkin" class="sf-input" placeholder="Aggiungi data">
       </div>
       <div class="sf">
-        <span class="sf-label">Check-in</span>
-        <span class="sf-val">Aggiungi data</span>
+        <label class="sf-label" for="sf-checkout">Check-out</label>
+        <input type="date" id="sf-checkout" class="sf-input" placeholder="Aggiungi data">
       </div>
       <div class="sf">
-        <span class="sf-label">Check-out</span>
-        <span class="sf-val">Aggiungi data</span>
+        <label class="sf-label" for="sf-type">Alloggio</label>
+        <select id="sf-type" class="sf-input">
+          <option value="">Tutti</option>
+          <option value="1">Appartamento</option>
+          <option value="19">Casa</option>
+          <option value="14">Studio</option>
+          <option value="2">Villa</option>
+          <option value="20">Villetta</option>
+        </select>
       </div>
-      <button class="sf-btn" aria-label="Cerca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m21 21-4.35-4.35"/></svg></button>
-    </div>
+      <div class="sf">
+        <label class="sf-label" for="sf-guests">Ospiti</label>
+        <select id="sf-guests" class="sf-input">
+          <option value="">Tutti</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+      <button type="submit" class="sf-btn" aria-label="Cerca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m21 21-4.35-4.35"/></svg></button>
+    </form>
   </div>
 
+  <!-- Location label -->
   <div class="hero-location visible" id="heroLocation">
     <svg class="hero-location-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    <span class="hero-location-text" id="heroLocationText">Villasimius, Sardegna</span>
+    <span class="hero-location-text" id="heroLocationText">Costa Smeralda, Sardegna</span>
   </div>
 
-  <div class="hero-indicators">
+  <!-- Slide indicators -->
+  <div class="hero-indicators" id="heroIndicators">
     <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
     <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
     <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
     <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
     <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
     <button class="hero-dot" data-slide="5" aria-label="Slide 6"></button>
+    <button class="hero-dot" data-slide="6" aria-label="Slide 7"></button>
   </div>
 
   <div class="hero-scroll"><div class="scroll-track"></div>Scorri</div>
@@ -98,13 +127,13 @@
     <p class="eyebrow reveal">La nostra filosofia</p>
     <h2 class="ed-title reveal d1">Beyond stays.<br><em>Vivi come un local.</em></h2>
     <p class="ed-body reveal d2">Ogni casa Propertize &egrave; unica, arredata con cura e completa di tutti i comfort. Dalla cucina attrezzata al wi-fi veloce, ogni dettaglio &egrave; pensato per farti stare bene &mdash; come a casa, ma con qualcosa in pi&ugrave;: la libert&agrave; di scoprire ogni destinazione come farebbe chi ci vive. Passeggia nei mercati locali, assaggia i sapori autentici, scopri angoli nascosti.</p>
-    <a href="#" class="btn-solid reveal d3">
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/" target="_blank" class="btn-solid reveal d3">
       Esplora i soggiorni
       <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
   <div class="ed-img reveal">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80&auto=format&fit=crop" alt="Interno casa Propertize" loading="lazy">
+    <img src="images/interno-casa.jpg" alt="Interno casa Propertize" loading="lazy">
   </div>
 </section>
 
@@ -112,19 +141,20 @@
 <section id="destinations">
   <div class="dest-header">
     <h2 class="reveal">Le nostre<br><em>destinazioni</em></h2>
-    <div class="dest-nav reveal d1">
+    <div class="dest-nav">
       <button onclick="scrollCarousel(-1)" aria-label="Precedente">
         <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
       </button>
-      <button onclick="scrollCarousel(1)" aria-label="Successiva">
+      <button onclick="scrollCarousel(1)" aria-label="Successivo">
         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
     </div>
   </div>
 
   <div class="dest-track" id="destTrack">
+    <!-- 1. Golfo Aranci -->
     <div class="dest-card reveal">
-      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80&auto=format&fit=crop" alt="Golfo Aranci, Sardegna" loading="lazy">
+      <img src="images/card-golfo-aranci.jpg" alt="Golfo Aranci, Sardegna" loading="lazy">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Golfo Aranci</div>
@@ -133,8 +163,9 @@
       </div>
     </div>
 
+    <!-- 2. Cagliari -->
     <div class="dest-card reveal d1">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&auto=format&fit=crop" alt="Cucina tipica sarda" loading="lazy">
+      <img src="images/card-cagliari.jpg" alt="Cagliari, Sardegna" loading="lazy">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Sapori di Sardegna</div>
@@ -143,8 +174,9 @@
       </div>
     </div>
 
+    <!-- 3. Costa Smeralda -->
     <div class="dest-card reveal d2">
-      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80&auto=format&fit=crop" alt="Costa Smeralda" loading="lazy">
+      <img src="images/card-costa-smeralda.jpg" alt="Costa Smeralda" loading="lazy">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Costa Smeralda</div>
@@ -153,8 +185,9 @@
       </div>
     </div>
 
+    <!-- 4. Torre dei Corsari -->
     <div class="dest-card reveal d3">
-      <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80&auto=format&fit=crop" alt="Trekking in Sardegna" loading="lazy">
+      <img src="images/card-torre-dei-corsari.jpg" alt="Torre dei Corsari, Costa Verde" loading="lazy">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Trekking &amp; Natura</div>
@@ -163,28 +196,9 @@
       </div>
     </div>
 
+    <!-- 5. Alghero -->
     <div class="dest-card reveal d4">
-      <img src="https://images.unsplash.com/photo-1515404929826-76fff9fef6fe?w=800&q=80&auto=format&fit=crop" alt="Torre dei Corsari, Costa Verde" loading="lazy">
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-info">
-        <div class="dest-card-name">Torre dei Corsari</div>
-        <div class="dest-card-desc">Dune dorate e tramonti sulla Costa Verde</div>
-        <div class="dest-card-count">6 alloggi</div>
-      </div>
-    </div>
-
-    <div class="dest-card reveal">
-      <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80&auto=format&fit=crop" alt="Vigneti sardi, Cannonau" loading="lazy">
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-info">
-        <div class="dest-card-name">Vigneti &amp; Cantine</div>
-        <div class="dest-card-desc">Cannonau, Vermentino e degustazioni tra i vigneti dell'isola</div>
-        <div class="dest-card-count">Esperienze enogastronomiche</div>
-      </div>
-    </div>
-
-    <div class="dest-card reveal d1">
-      <img src="https://images.unsplash.com/photo-1548783300-70b41bc01144?w=800&q=80&auto=format&fit=crop" alt="Alghero, Sardegna" loading="lazy">
+      <img src="images/card-alghero.jpg" alt="Alghero, Sardegna" loading="lazy">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Alghero</div>
@@ -193,18 +207,9 @@
       </div>
     </div>
 
-    <div class="dest-card reveal d2">
-      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80&auto=format&fit=crop" alt="Snorkeling mare Sardegna" loading="lazy">
-      <div class="dest-card-overlay"></div>
-      <div class="dest-card-info">
-        <div class="dest-card-name">Mare &amp; Snorkeling</div>
-        <div class="dest-card-desc">Fondali trasparenti e calette raggiungibili solo dal mare</div>
-        <div class="dest-card-count">Esperienze marine</div>
-      </div>
-    </div>
-
-    <div class="dest-card reveal d3">
-      <img src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=800&q=80&auto=format&fit=crop" alt="Villasimius, Sardegna" loading="lazy">
+    <!-- 6. Villasimius -->
+    <div class="dest-card reveal">
+      <img src="images/card-villasimius.jpg" alt="Villasimius, Sardegna" loading="lazy">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Villasimius</div>
@@ -213,8 +218,9 @@
       </div>
     </div>
 
-    <div class="dest-card reveal d4">
-      <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800&q=80&auto=format&fit=crop" alt="Nuoro, Barbagia" loading="lazy">
+    <!-- 7. Nuoro & Barbagia -->
+    <div class="dest-card reveal d1">
+      <img src="images/card-nuoro-barbagia.jpg" alt="Nuoro, Barbagia" loading="lazy">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Nuoro &amp; Barbagia</div>
@@ -223,8 +229,9 @@
       </div>
     </div>
 
-    <div class="dest-card reveal">
-      <img src="https://images.unsplash.com/photo-1520440229-6469a149ac59?w=800&q=80&auto=format&fit=crop" alt="Milano" loading="lazy">
+    <!-- 8. Milano -->
+    <div class="dest-card reveal d2">
+      <img src="images/card-milano.jpg" alt="Milano" loading="lazy">
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Milano</div>
@@ -239,31 +246,31 @@
 <section id="discover">
   <h2 class="discover-title reveal">Scopri per <em>tipologia</em></h2>
   <div class="d-grid">
-    <div class="d-card reveal">
-      <img src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?w=800&q=80&auto=format&fit=crop" alt="Vicino al mare in Sardegna" loading="lazy">
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-localita-marittima/" target="_blank" class="d-card reveal">
+      <img src="images/discover-villasimius.jpg" alt="Vicino al mare in Sardegna" loading="lazy">
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Vicino al mare</span>
-    </div>
-    <div class="d-card reveal d1">
-      <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&q=80&auto=format&fit=crop" alt="Centro storico sardo" loading="lazy">
+    </a>
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-centro-citta/" target="_blank" class="d-card reveal d1">
+      <img src="images/discover-cagliari.jpg" alt="Centro storico sardo" loading="lazy">
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Centro citt&agrave;</span>
-    </div>
-    <div class="d-card reveal d2">
-      <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=600&q=80&auto=format&fit=crop" alt="Cane in spiaggia Sardegna" loading="lazy">
+    </a>
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-pet-friendly/" target="_blank" class="d-card reveal d2">
+      <img src="images/discover-golfo-aranci.jpg" alt="Pet friendly in Sardegna" loading="lazy">
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Pet friendly</span>
-    </div>
-    <div class="d-card reveal d3">
-      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&auto=format&fit=crop" alt="Appartamento vacanza" loading="lazy">
+    </a>
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-appartamenti-c1/list-view/" target="_blank" class="d-card reveal d3">
+      <img src="images/discover-olbia-milano.jpg" alt="Appartamento vacanza" loading="lazy">
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Appartamenti</span>
-    </div>
-    <div class="d-card reveal d4">
-      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop" alt="Villa in Sardegna" loading="lazy">
+    </a>
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-ville-e-villette/" target="_blank" class="d-card reveal d4">
+      <img src="images/discover-torre-corsari.jpg" alt="Villa in Sardegna" loading="lazy">
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Ville e villette</span>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -275,22 +282,22 @@
     <p>
       Un motivo per partire. Per qualcuno di importante. Anche per te.
     </p>
-    <a href="#" class="btn-solid">
+    <a href="https://demo-651.avantio.dev/it/gift-cards-sardegna-lombardia/" target="_blank" class="btn-solid">
       Acquista ora
       <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
   <div class="gift-cards reveal d2">
     <div class="g-card">
-      <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&q=75&auto=format&fit=crop&crop=bottom" alt="Weekend in Sardegna" loading="lazy">
+      <img src="images/gift-spiagge.jpg" alt="Weekend in Sardegna" loading="lazy">
       <span class="g-card-label">Weekend in Sardegna</span>
     </div>
     <div class="g-card">
-      <img src="https://images.unsplash.com/photo-1520440229-6469a149ac59?w=500&q=75&auto=format&fit=crop" alt="Soggiorno Milano" loading="lazy">
+      <img src="images/gift-cucina-sarda.jpg" alt="Soggiorno Milano" loading="lazy">
       <span class="g-card-label">Soggiorno Milano</span>
     </div>
     <div class="g-card">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=75&auto=format&fit=crop" alt="Gift Card flessibile" loading="lazy">
+      <img src="images/gift-natura.jpg" alt="Gift Card flessibile" loading="lazy">
       <span class="g-card-label">Gift Card flessibile</span>
     </div>
   </div>
@@ -304,13 +311,13 @@
       Ogni casa ha una storia.<br>Raccontala con Propertize.
     </h2>
     <p class="owners-sub reveal d2">Gestiamo la tua casa in ogni dettaglio: dall'accoglienza alla manutenzione, dalla comunicazione alla performance. Tu ti godi i risultati.</p>
-    <a href="#" class="btn-outline reveal d3">
+    <a href="https://demo-651.avantio.dev/it/proprietari/" target="_blank" class="btn-outline reveal d3">
       Scopri come funziona
       <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
   <div class="owners-img reveal d1">
-    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=80&auto=format&fit=crop" alt="Villa gestita da Propertize in Sardegna" loading="lazy">
+    <img src="images/owners-villa.jpg" alt="Villa gestita da Propertize in Sardegna" loading="lazy">
   </div>
 </section>
 
@@ -330,18 +337,18 @@
     </div>
     <div class="ft-col">
       <h4>Link utili</h4>
-      <a href="#">Chi siamo</a>
-      <a href="#">Destinazioni</a>
-      <a href="#">Blog</a>
-      <a href="#">Contattaci</a>
-      <a href="#">FAQ</a>
+      <a href="#editorial">Chi siamo</a>
+      <a href="#destinations">Destinazioni</a>
+      <a href="https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/" target="_blank">Case</a>
+      <a href="https://demo-651.avantio.dev/it/affitti/favoriti/" target="_blank">Favoriti</a>
+      <a href="mailto:info@propertize.it">Contattaci</a>
     </div>
     <div class="ft-col">
       <h4>Collabora</h4>
-      <a href="#">Proprietari</a>
-      <a href="#">Agenzie</a>
-      <a href="#">Partner locali</a>
-      <a href="#">Lavora con noi</a>
+      <a href="https://demo-651.avantio.dev/it/proprietari/" target="_blank">Proprietari</a>
+      <a href="mailto:info@propertize.it">Agenzie</a>
+      <a href="mailto:info@propertize.it">Partner locali</a>
+      <a href="mailto:info@propertize.it">Lavora con noi</a>
     </div>
     <div class="ft-col ft-newsletter">
       <h4>Newsletter</h4>
@@ -358,12 +365,12 @@
   </div>
   <hr class="ft-div">
   <div class="ft-bottom">
-    <p class="ft-copy"><a href="#">Gestione casa vacanze Avantio</a></p>
+    <p class="ft-copy"><a href="https://avantio.com/it" target="_blank">Gestione casa vacanze Avantio</a></p>
     <div class="ft-legal">
-      <a href="#">Condizioni Generali</a>
-      <a href="#">Politica dei cookies</a>
-      <a href="#">Avviso legale</a>
-      <a href="#">Politica di Privacy</a>
+      <a href="https://demo-651.avantio.dev/it/condizioni-generali/" target="_blank">Condizioni Generali</a>
+      <a href="https://demo-651.avantio.dev/it/politica-dei-cookies/" target="_blank">Politica dei cookies</a>
+      <a href="https://demo-651.avantio.dev/it/avviso-legale/" target="_blank">Avviso legale</a>
+      <a href="https://demo-651.avantio.dev/it/politica-di-privacy/" target="_blank">Politica di Privacy</a>
     </div>
   </div>
 </footer>
