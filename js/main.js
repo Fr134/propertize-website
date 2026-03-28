@@ -38,6 +38,22 @@ function doSearch() {
   return false;
 }
 
+// Mobile menu
+const hamburger = document.getElementById('navHamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+  const isOpen = hamburger.classList.toggle('open');
+  navLinks.classList.toggle('mobile-open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+navLinks.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('mobile-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+});
+
 // Navbar scroll
 const nav = document.getElementById('navbar');
 function updateNav() {

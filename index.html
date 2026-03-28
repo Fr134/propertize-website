@@ -3,56 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Propertize – Beyond Stays</title>
+<title>Propertize — Affitti Brevi Sardegna e Milano | Ville e Appartamenti Vacanza</title>
 <meta name="description" content="Propertize: affitti brevi di qualit&agrave; in Sardegna e Milano. Ville, appartamenti e esperienze uniche per vivere come un local.">
+<link rel="canonical" href="https://propertize.it/">
 <link rel="icon" type="image/png" href="images/logo-propertize.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Propertize — Affitti Brevi in Sardegna e Milano">
+<meta property="og:description" content="Ville, appartamenti e esperienze uniche per vivere come un local. Affitti brevi di qualit&agrave; in Sardegna, Milano e Sicilia.">
+<meta property="og:url" content="https://propertize.it/">
+<meta property="og:image" content="https://propertize.it/images/hero-costa-smeralda.jpg">
+<meta property="og:site_name" content="Propertize">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Propertize — Affitti Brevi in Sardegna e Milano">
+<meta name="twitter:description" content="Ville, appartamenti e esperienze uniche per vivere come un local.">
+<meta name="twitter:image" content="https://propertize.it/images/hero-costa-smeralda.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/hero-costa-smeralda.webp" type="image/webp">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Propertize",
+      "url": "https://propertize.it",
+      "logo": "https://propertize.it/images/logo-propertize.png",
+      "telephone": "+393517700425",
+      "email": "info@propertize.it",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Piazza della Repubblica 19",
+        "addressLocality": "Milano",
+        "addressCountry": "IT"
+      },
+      "sameAs": [
+        "https://www.instagram.com/propertize.it/",
+        "https://www.facebook.com/Propertize1",
+        "https://it.linkedin.com/company/propertizesrl"
+      ]
+    },
+    {
+      "@type": "LodgingBusiness",
+      "name": "Propertize — Beyond Stays",
+      "description": "Affitti brevi di qualita in Sardegna e Milano. Ville, appartamenti e esperienze uniche per vivere come un local.",
+      "url": "https://propertize.it",
+      "telephone": "+393517700425",
+      "email": "info@propertize.it",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Piazza della Repubblica 19",
+        "addressLocality": "Milano",
+        "addressCountry": "IT"
+      },
+      "areaServed": [
+        {"@type": "State", "name": "Sardegna"},
+        {"@type": "City", "name": "Milano"},
+        {"@type": "State", "name": "Sicilia"}
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "Propertize",
+      "url": "https://propertize.it"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Come funziona la prenotazione?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scegli la destinazione, le date e il tipo di alloggio dal nostro sito. Dopo aver selezionato la proprieta, potrai prenotare direttamente online con pagamento sicuro. Riceverai una conferma via email con tutte le istruzioni per il check-in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual e la politica di cancellazione?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La cancellazione e soggetta a penali progressive: 10% dell'importo se cancelli almeno 30 giorni prima dell'arrivo, 50% tra 29 e 7 giorni prima, 100% sotto i 7 giorni. Le condizioni specifiche sono indicate nella pagina di ogni alloggio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa e incluso nel soggiorno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ogni soggiorno include cucina attrezzata, wi-fi veloce, biancheria da letto e bagno, kit di benvenuto con prodotti locali e assistenza multilingue 24/7. Alcune proprieta offrono anche parcheggio privato, piscina e giardino. Metodi di pagamento accettati: bonifico bancario, Mastercard e Visa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Accettate animali domestici?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si, molte delle nostre proprieta sono pet friendly. Puoi filtrare le case che accettano animali direttamente dalla ricerca."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come funziona il check-in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il nostro team gestisce check-in e check-out per ogni proprieta, con assistenza multilingue disponibile 24/7. Riceverai tutte le istruzioni di accesso via email prima dell'arrivo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come raggiungo le proprieta in Sardegna?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Sardegna e raggiungibile in aereo (aeroporti di Olbia, Cagliari e Alghero) o in traghetto (porti di Olbia, Porto Torres, Cagliari e Golfo Aranci)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "AggregateRating",
+      "itemReviewed": {
+        "@type": "LodgingBusiness",
+        "name": "Propertize"
+      },
+      "ratingValue": "5",
+      "bestRating": "5",
+      "ratingCount": "3",
+      "reviewCount": "3"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
+<a href="#hero" class="skip-nav">Vai al contenuto</a>
+
 <!-- NAVBAR -->
-<nav id="navbar" class="is-top">
+<nav id="navbar" class="is-top" aria-label="Navigazione principale">
   <a href="#" class="nav-logo">
     <img class="nav-logo-svg" src="images/logo-propertize.svg" alt="Propertize logo">
   </a>
   <ul class="nav-links">
     <li><a href="#hero">Home</a></li>
     <li><a href="#destinations">Destinazioni</a></li>
-    <li><a href="https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/" target="_blank">Case</a></li>
-    <li><a href="https://demo-651.avantio.dev/it/gift-cards-sardegna-lombardia/" target="_blank">Gift Card</a></li>
-    <li class="nav-cta"><a href="https://demo-651.avantio.dev/it/proprietari/" target="_blank">Proprietari</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/" target="_blank" rel="noopener noreferrer">Case</a></li>
+    <li><a href="https://demo-651.avantio.dev/it/esperienze-sardegna-lombardia/" target="_blank" rel="noopener noreferrer">Esperienze</a></li>
+    <li><a href="https://demo-651.avantio.dev/it/gift-cards-sardegna-lombardia/" target="_blank" rel="noopener noreferrer">Gift Card</a></li>
+    <li class="nav-cta"><a href="https://demo-651.avantio.dev/it/proprietari/" target="_blank" rel="noopener noreferrer">Proprietari</a></li>
   </ul>
-  <div class="nav-hamburger" onclick="this.classList.toggle('open')">
+  <button class="nav-hamburger" id="navHamburger" aria-label="Apri menu" aria-expanded="false">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
+
+<main>
 
 <!-- HERO SLIDESHOW -->
 <section id="hero">
   <div class="hero-slideshow" id="heroSlideshow">
     <div class="hero-slide active" data-location="Costa Smeralda, Sardegna">
-      <img src="images/hero-costa-smeralda.jpg" alt="Costa Smeralda — mare cristallino" loading="eager">
+      <picture>
+        <source srcset="images/hero-costa-smeralda.webp" type="image/webp">
+        <img src="images/hero-costa-smeralda.jpg" alt="Costa Smeralda — mare cristallino" loading="eager" fetchpriority="high" width="1920" height="1280">
+      </picture>
     </div>
     <div class="hero-slide" data-location="Golfo di Orosei, Sardegna">
-      <img src="images/hero-golfo-orosei.jpg" alt="Golfo di Orosei — calette tra le falesie" loading="lazy">
+      <picture>
+        <source srcset="images/hero-golfo-orosei.webp" type="image/webp">
+        <img src="images/hero-golfo-orosei.jpg" alt="Golfo di Orosei — calette tra le falesie" loading="lazy" width="1920" height="2876">
+      </picture>
     </div>
     <div class="hero-slide" data-location="Golfo Aranci, Sardegna">
-      <img src="images/hero-golfo-aranci.jpg" alt="Golfo Aranci — acque turchesi della costa nord-est" loading="lazy">
+      <picture>
+        <source srcset="images/hero-golfo-aranci.webp" type="image/webp">
+        <img src="images/hero-golfo-aranci.jpg" alt="Golfo Aranci — acque turchesi della costa nord-est" loading="lazy" width="1920" height="1276">
+      </picture>
     </div>
     <div class="hero-slide" data-location="Costa Verde, Sardegna">
-      <img src="images/hero-costa-verde.jpg" alt="Costa Verde — dune dorate e mare aperto" loading="lazy">
+      <picture>
+        <source srcset="images/hero-costa-verde.webp" type="image/webp">
+        <img src="images/hero-costa-verde.jpg" alt="Costa Verde — dune dorate e mare aperto" loading="lazy" width="1920" height="2485">
+      </picture>
     </div>
     <div class="hero-slide" data-location="La Pelosa, Stintino">
-      <img src="images/hero-la-pelosa.jpg" alt="La Pelosa — sabbia bianca e acque cristalline" loading="lazy">
+      <picture>
+        <source srcset="images/hero-la-pelosa.webp" type="image/webp">
+        <img src="images/hero-la-pelosa.jpg" alt="La Pelosa — sabbia bianca e acque cristalline" loading="lazy" width="1920" height="1243">
+      </picture>
     </div>
     <div class="hero-slide" data-location="Alghero, Sardegna">
-      <img src="images/hero-alghero.jpg" alt="Alghero — Riviera del Corallo" loading="lazy">
+      <picture>
+        <source srcset="images/hero-alghero.webp" type="image/webp">
+        <img src="images/hero-alghero.jpg" alt="Alghero — Riviera del Corallo" loading="lazy" width="1920" height="1280">
+      </picture>
     </div>
     <div class="hero-slide" data-location="Milano, Lombardia">
-      <img src="images/hero-milano.jpg" alt="Milano — skyline e design" loading="lazy">
+      <picture>
+        <source srcset="images/hero-milano.webp" type="image/webp">
+        <img src="images/hero-milano.jpg" alt="Milano — skyline e design" loading="lazy" width="1920" height="1280">
+      </picture>
     </div>
   </div>
 
@@ -126,14 +293,18 @@
   <div class="ed-text">
     <p class="eyebrow reveal">La nostra filosofia</p>
     <h2 class="ed-title reveal d1">Beyond stays.<br><em>Vivi come un local.</em></h2>
-    <p class="ed-body reveal d2">Ogni casa Propertize &egrave; unica, arredata con cura e completa di tutti i comfort. Dalla cucina attrezzata al wi-fi veloce, ogni dettaglio &egrave; pensato per farti stare bene &mdash; come a casa, ma con qualcosa in pi&ugrave;: la libert&agrave; di scoprire ogni destinazione come farebbe chi ci vive. Passeggia nei mercati locali, assaggia i sapori autentici, scopri angoli nascosti.</p>
-    <a href="https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/" target="_blank" class="btn-solid reveal d3">
+    <p class="ed-body reveal d2">Ogni casa Propertize &egrave; unica, arredata con cura e completa di tutti i comfort. Dalla cucina attrezzata al wi-fi veloce, ogni dettaglio &egrave; pensato per farti stare bene &mdash; come a casa, ma con qualcosa in pi&ugrave;: la libert&agrave; di scoprire ogni destinazione come farebbe chi ci vive.</p>
+    <p class="ed-body reveal d2">Passeggia nei mercati locali, assaggia i sapori autentici, scopri angoli nascosti. Gestiamo propriet&agrave; selezionate tra Sardegna, Milano e Sicilia &mdash; ville vista mare, appartamenti in centro storico e case immerse nella natura &mdash; pubblicate su oltre 50 portali internazionali. Ogni soggiorno include cucina attrezzata, wi-fi veloce, kit di benvenuto con prodotti locali e assistenza dedicata 24/7.</p>
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/" target="_blank" rel="noopener noreferrer" class="btn-solid reveal d3">
       Esplora i soggiorni
       <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
   <div class="ed-img reveal">
-    <img src="images/interno-casa.jpg" alt="Interno casa Propertize" loading="lazy">
+    <picture>
+      <source srcset="images/interno-casa.webp" type="image/webp">
+      <img src="images/interno-casa.jpg" alt="Interno casa Propertize" loading="lazy" width="900" height="612">
+    </picture>
   </div>
 </section>
 
@@ -154,7 +325,10 @@
   <div class="dest-track" id="destTrack">
     <!-- 1. Golfo Aranci -->
     <div class="dest-card reveal">
-      <img src="images/card-golfo-aranci.jpg" alt="Golfo Aranci, Sardegna" loading="lazy">
+      <picture>
+        <source srcset="images/card-golfo-aranci.webp" type="image/webp">
+        <img src="images/card-golfo-aranci.jpg" alt="Golfo Aranci, Sardegna" loading="lazy" width="800" height="533">
+      </picture>
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Golfo Aranci</div>
@@ -165,7 +339,10 @@
 
     <!-- 2. Cagliari -->
     <div class="dest-card reveal d1">
-      <img src="images/card-cagliari.jpg" alt="Cagliari, Sardegna" loading="lazy">
+      <picture>
+        <source srcset="images/card-cagliari.webp" type="image/webp">
+        <img src="images/card-cagliari.jpg" alt="Cagliari, Sardegna" loading="lazy" width="800" height="533">
+      </picture>
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Sapori di Sardegna</div>
@@ -176,7 +353,10 @@
 
     <!-- 3. Costa Smeralda -->
     <div class="dest-card reveal d2">
-      <img src="images/card-costa-smeralda.jpg" alt="Costa Smeralda" loading="lazy">
+      <picture>
+        <source srcset="images/card-costa-smeralda.webp" type="image/webp">
+        <img src="images/card-costa-smeralda.jpg" alt="Costa Smeralda" loading="lazy" width="800" height="533">
+      </picture>
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Costa Smeralda</div>
@@ -187,7 +367,10 @@
 
     <!-- 4. Torre dei Corsari -->
     <div class="dest-card reveal d3">
-      <img src="images/card-torre-dei-corsari.jpg" alt="Torre dei Corsari, Costa Verde" loading="lazy">
+      <picture>
+        <source srcset="images/card-torre-dei-corsari.webp" type="image/webp">
+        <img src="images/card-torre-dei-corsari.jpg" alt="Torre dei Corsari, Costa Verde" loading="lazy" width="800" height="533">
+      </picture>
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Trekking &amp; Natura</div>
@@ -198,7 +381,10 @@
 
     <!-- 5. Alghero -->
     <div class="dest-card reveal d4">
-      <img src="images/card-alghero.jpg" alt="Alghero, Sardegna" loading="lazy">
+      <picture>
+        <source srcset="images/card-alghero.webp" type="image/webp">
+        <img src="images/card-alghero.jpg" alt="Alghero, Sardegna" loading="lazy" width="800" height="600">
+      </picture>
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Alghero</div>
@@ -209,7 +395,10 @@
 
     <!-- 6. Villasimius -->
     <div class="dest-card reveal">
-      <img src="images/card-villasimius.jpg" alt="Villasimius, Sardegna" loading="lazy">
+      <picture>
+        <source srcset="images/card-villasimius.webp" type="image/webp">
+        <img src="images/card-villasimius.jpg" alt="Villasimius, Sardegna" loading="lazy" width="800" height="992">
+      </picture>
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Villasimius</div>
@@ -220,7 +409,10 @@
 
     <!-- 7. Nuoro & Barbagia -->
     <div class="dest-card reveal d1">
-      <img src="images/card-nuoro-barbagia.jpg" alt="Nuoro, Barbagia" loading="lazy">
+      <picture>
+        <source srcset="images/card-nuoro-barbagia.webp" type="image/webp">
+        <img src="images/card-nuoro-barbagia.jpg" alt="Nuoro, Barbagia" loading="lazy" width="800" height="1200">
+      </picture>
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Nuoro &amp; Barbagia</div>
@@ -231,7 +423,10 @@
 
     <!-- 8. Milano -->
     <div class="dest-card reveal d2">
-      <img src="images/card-milano.jpg" alt="Milano" loading="lazy">
+      <picture>
+        <source srcset="images/card-milano.webp" type="image/webp">
+        <img src="images/card-milano.jpg" alt="Milano" loading="lazy" width="800" height="533">
+      </picture>
       <div class="dest-card-overlay"></div>
       <div class="dest-card-info">
         <div class="dest-card-name">Milano</div>
@@ -246,28 +441,43 @@
 <section id="discover">
   <h2 class="discover-title reveal">Scopri per <em>tipologia</em></h2>
   <div class="d-grid">
-    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-localita-marittima/" target="_blank" class="d-card reveal">
-      <img src="images/discover-villasimius.jpg" alt="Vicino al mare in Sardegna" loading="lazy">
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-localita-marittima/" target="_blank" rel="noopener noreferrer" class="d-card reveal">
+      <picture>
+        <source srcset="images/discover-villasimius.webp" type="image/webp">
+        <img src="images/discover-villasimius.jpg" alt="Vicino al mare in Sardegna" loading="lazy" width="800" height="532">
+      </picture>
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Vicino al mare</span>
     </a>
-    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-centro-citta/" target="_blank" class="d-card reveal d1">
-      <img src="images/discover-cagliari.jpg" alt="Centro storico sardo" loading="lazy">
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-centro-citta/" target="_blank" rel="noopener noreferrer" class="d-card reveal d1">
+      <picture>
+        <source srcset="images/discover-cagliari.webp" type="image/webp">
+        <img src="images/discover-cagliari.jpg" alt="Centro storico sardo" loading="lazy" width="800" height="533">
+      </picture>
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Centro citt&agrave;</span>
     </a>
-    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-pet-friendly/" target="_blank" class="d-card reveal d2">
-      <img src="images/discover-golfo-aranci.jpg" alt="Pet friendly in Sardegna" loading="lazy">
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-pet-friendly/" target="_blank" rel="noopener noreferrer" class="d-card reveal d2">
+      <picture>
+        <source srcset="images/discover-golfo-aranci.webp" type="image/webp">
+        <img src="images/discover-golfo-aranci.jpg" alt="Pet friendly in Sardegna" loading="lazy" width="800" height="533">
+      </picture>
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Pet friendly</span>
     </a>
-    <a href="https://demo-651.avantio.dev/it/affitti/affitti-appartamenti-c1/list-view/" target="_blank" class="d-card reveal d3">
-      <img src="images/discover-olbia-milano.jpg" alt="Appartamento vacanza" loading="lazy">
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-appartamenti-c1/list-view/" target="_blank" rel="noopener noreferrer" class="d-card reveal d3">
+      <picture>
+        <source srcset="images/discover-olbia-milano.webp" type="image/webp">
+        <img src="images/discover-olbia-milano.jpg" alt="Appartamento vacanza" loading="lazy" width="800" height="450">
+      </picture>
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Appartamenti</span>
     </a>
-    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-ville-e-villette/" target="_blank" class="d-card reveal d4">
-      <img src="images/discover-torre-corsari.jpg" alt="Villa in Sardegna" loading="lazy">
+    <a href="https://demo-651.avantio.dev/it/affitti/affitti-p0/tag-ville-e-villette/" target="_blank" rel="noopener noreferrer" class="d-card reveal d4">
+      <picture>
+        <source srcset="images/discover-torre-corsari.webp" type="image/webp">
+        <img src="images/discover-torre-corsari.jpg" alt="Villa in Sardegna" loading="lazy" width="800" height="533">
+      </picture>
       <div class="d-card-overlay"></div>
       <span class="d-card-label">Ville e villette</span>
     </a>
@@ -282,22 +492,31 @@
     <p>
       Un motivo per partire. Per qualcuno di importante. Anche per te.
     </p>
-    <a href="https://demo-651.avantio.dev/it/gift-cards-sardegna-lombardia/" target="_blank" class="btn-solid">
+    <a href="https://demo-651.avantio.dev/it/gift-cards-sardegna-lombardia/" target="_blank" rel="noopener noreferrer" class="btn-solid">
       Acquista ora
       <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
   <div class="gift-cards reveal d2">
     <div class="g-card">
-      <img src="images/gift-spiagge.jpg" alt="Weekend in Sardegna" loading="lazy">
+      <picture>
+        <source srcset="images/gift-spiagge.webp" type="image/webp">
+        <img src="images/gift-spiagge.jpg" alt="Weekend in Sardegna" loading="lazy" width="600" height="400">
+      </picture>
       <span class="g-card-label">Weekend in Sardegna</span>
     </div>
     <div class="g-card">
-      <img src="images/gift-cucina-sarda.jpg" alt="Soggiorno Milano" loading="lazy">
+      <picture>
+        <source srcset="images/gift-cucina-sarda.webp" type="image/webp">
+        <img src="images/gift-cucina-sarda.jpg" alt="Soggiorno Milano" loading="lazy" width="600" height="450">
+      </picture>
       <span class="g-card-label">Soggiorno Milano</span>
     </div>
     <div class="g-card">
-      <img src="images/gift-natura.jpg" alt="Gift Card flessibile" loading="lazy">
+      <picture>
+        <source srcset="images/gift-natura.webp" type="image/webp">
+        <img src="images/gift-natura.jpg" alt="Gift Card flessibile" loading="lazy" width="600" height="357">
+      </picture>
       <span class="g-card-label">Gift Card flessibile</span>
     </div>
   </div>
@@ -311,15 +530,87 @@
       Ogni casa ha una storia.<br>Raccontala con Propertize.
     </h2>
     <p class="owners-sub reveal d2">Gestiamo la tua casa in ogni dettaglio: dall'accoglienza alla manutenzione, dalla comunicazione alla performance. Tu ti godi i risultati.</p>
-    <a href="https://demo-651.avantio.dev/it/proprietari/" target="_blank" class="btn-outline reveal d3">
+    <a href="https://demo-651.avantio.dev/it/proprietari/" target="_blank" rel="noopener noreferrer" class="btn-outline reveal d3">
       Scopri come funziona
       <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
   <div class="owners-img reveal d1">
-    <img src="images/owners-villa.jpg" alt="Villa gestita da Propertize in Sardegna" loading="lazy">
+    <picture>
+      <source srcset="images/owners-villa.webp" type="image/webp">
+      <img src="images/owners-villa.jpg" alt="Villa gestita da Propertize in Sardegna" loading="lazy" width="900" height="597">
+    </picture>
   </div>
 </section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="test-header">
+    <p class="eyebrow reveal">Dicono di noi</p>
+    <h2 class="test-title reveal d1">Esperienze dei nostri <em>ospiti</em></h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-quote">&ldquo;Casa bellissima a Golfo Aranci, a due passi dalla spiaggia. Tutto era perfetto: la pulizia, il kit di benvenuto con prodotti sardi e l'assistenza sempre disponibile. Torneremo sicuramente!&rdquo;</p>
+      <div class="test-author">
+        <span class="test-name">Marco e Giulia</span>
+        <span class="test-location">Golfo Aranci &middot; Agosto 2025</span>
+      </div>
+    </div>
+    <div class="test-card reveal d1">
+      <div class="test-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-quote">&ldquo;Abbiamo soggiornato in un appartamento in centro a Milano per lavoro. Moderno, pulito e in posizione strategica. Il check-in autonomo &egrave; stato semplicissimo. Consigliato per chi viaggia spesso.&rdquo;</p>
+      <div class="test-author">
+        <span class="test-name">Laura D.</span>
+        <span class="test-location">Milano &middot; Ottobre 2025</span>
+      </div>
+    </div>
+    <div class="test-card reveal d2">
+      <div class="test-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-quote">&ldquo;Villa con piscina sulla Costa Smeralda: un sogno. Lo staff di Propertize ci ha consigliato ristoranti e spiagge che non avremmo mai trovato da soli. Un'esperienza da veri local.&rdquo;</p>
+      <div class="test-author">
+        <span class="test-name">Famiglia Rossi</span>
+        <span class="test-location">Costa Smeralda &middot; Luglio 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-header">
+    <h2 class="faq-title reveal">Domande <em>frequenti</em></h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item reveal">
+      <summary class="faq-question">Come funziona la prenotazione?</summary>
+      <p class="faq-answer">Scegli la destinazione, le date e il tipo di alloggio dal nostro sito. Dopo aver selezionato la propriet&agrave;, potrai prenotare direttamente online con pagamento sicuro. Riceverai una conferma via email con tutte le istruzioni per il check-in.</p>
+    </details>
+    <details class="faq-item reveal d1">
+      <summary class="faq-question">Qual &egrave; la politica di cancellazione?</summary>
+      <p class="faq-answer">La cancellazione &egrave; soggetta a penali progressive: 10% dell'importo se cancelli almeno 30 giorni prima dell'arrivo, 50% tra 29 e 7 giorni prima, 100% sotto i 7 giorni. Le condizioni specifiche sono indicate nella pagina di ogni alloggio e nelle <a href="https://demo-651.avantio.dev/it/condizioni-generali/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:underline;">Condizioni Generali</a>.</p>
+    </details>
+    <details class="faq-item reveal d2">
+      <summary class="faq-question">Cosa &egrave; incluso nel soggiorno?</summary>
+      <p class="faq-answer">Ogni soggiorno include cucina attrezzata, wi-fi veloce, biancheria da letto e bagno, kit di benvenuto con prodotti locali e assistenza multilingue 24/7. Alcune propriet&agrave; offrono anche parcheggio privato, piscina e giardino. Metodi di pagamento accettati: bonifico bancario, Mastercard e Visa.</p>
+    </details>
+    <details class="faq-item reveal d3">
+      <summary class="faq-question">Accettate animali domestici?</summary>
+      <p class="faq-answer">S&igrave;, molte delle nostre propriet&agrave; sono pet friendly. Puoi filtrare le case che accettano animali direttamente dalla ricerca. Ti chiediamo solo di segnalarlo al momento della prenotazione per preparare al meglio l'alloggio.</p>
+    </details>
+    <details class="faq-item reveal d4">
+      <summary class="faq-question">Come funziona il check-in?</summary>
+      <p class="faq-answer">Il nostro team gestisce check-in e check-out per ogni propriet&agrave;, con assistenza multilingue disponibile 24/7. Riceverai tutte le istruzioni di accesso via email prima dell'arrivo. Per richieste speciali o necessit&agrave; particolari, puoi contattarci in qualsiasi momento.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary class="faq-question">Come raggiungo le propriet&agrave; in Sardegna?</summary>
+      <p class="faq-answer">La Sardegna &egrave; raggiungibile in aereo (aeroporti di Olbia, Cagliari e Alghero) o in traghetto (porti di Olbia, Porto Torres, Cagliari e Golfo Aranci). Dopo la prenotazione, ti invieremo indicazioni dettagliate e consigli per il noleggio auto.</p>
+    </details>
+  </div>
+</section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -333,19 +624,35 @@
         <div><a href="mailto:info@propertize.it">info@propertize.it</a></div>
         <div>Lun – Ven, 9:00 – 18:00</div>
         <div style="margin-top:8px;">&copy; Propertize S.r.l.</div>
+        <div class="ft-social">
+          <a href="https://www.instagram.com/propertize.it/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/Propertize1" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://it.linkedin.com/company/propertizesrl" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://wa.me/393517700425" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
     <div class="ft-col">
       <h4>Link utili</h4>
-      <a href="#editorial">Chi siamo</a>
+      <a href="https://demo-651.avantio.dev/it/chi-siamo/" target="_blank" rel="noopener noreferrer">Chi siamo</a>
       <a href="#destinations">Destinazioni</a>
-      <a href="https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/" target="_blank">Case</a>
-      <a href="https://demo-651.avantio.dev/it/affitti/favoriti/" target="_blank">Favoriti</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/" target="_blank" rel="noopener noreferrer">Case</a>
+      <a href="https://demo-651.avantio.dev/it/esperienze-sardegna-lombardia/" target="_blank" rel="noopener noreferrer">Esperienze</a>
+      <a href="https://demo-651.avantio.dev/it/affitti/favoriti/" target="_blank" rel="noopener noreferrer">Favoriti</a>
       <a href="mailto:info@propertize.it">Contattaci</a>
     </div>
     <div class="ft-col">
       <h4>Collabora</h4>
-      <a href="https://demo-651.avantio.dev/it/proprietari/" target="_blank">Proprietari</a>
+      <a href="https://demo-651.avantio.dev/it/proprietari/" target="_blank" rel="noopener noreferrer">Proprietari</a>
       <a href="mailto:info@propertize.it">Agenzie</a>
       <a href="mailto:info@propertize.it">Partner locali</a>
       <a href="mailto:info@propertize.it">Lavora con noi</a>
@@ -353,24 +660,25 @@
     <div class="ft-col ft-newsletter">
       <h4>Newsletter</h4>
       <p>Iscriviti per ricevere offerte esclusive e consigli di viaggio.</p>
-      <div class="ft-newsletter-form">
-        <input type="email" placeholder="La tua email">
-        <button>Iscriviti</button>
-      </div>
+      <form class="ft-newsletter-form" onsubmit="return false;">
+        <label for="newsletter-email" class="sr-only">Indirizzo email</label>
+        <input type="email" id="newsletter-email" placeholder="La tua email" required autocomplete="email">
+        <button type="submit">Iscriviti</button>
+      </form>
       <label class="ft-gdpr">
-        <input type="checkbox">
+        <input type="checkbox" required>
         <span>Acconsento al trattamento dei dati personali ai sensi del GDPR (Reg. UE 2016/679).</span>
       </label>
     </div>
   </div>
   <hr class="ft-div">
   <div class="ft-bottom">
-    <p class="ft-copy"><a href="https://avantio.com/it" target="_blank">Gestione casa vacanze Avantio</a></p>
+    <p class="ft-copy"><a href="https://avantio.com/it" target="_blank" rel="noopener noreferrer">Gestione casa vacanze Avantio</a></p>
     <div class="ft-legal">
-      <a href="https://demo-651.avantio.dev/it/condizioni-generali/" target="_blank">Condizioni Generali</a>
-      <a href="https://demo-651.avantio.dev/it/politica-dei-cookies/" target="_blank">Politica dei cookies</a>
-      <a href="https://demo-651.avantio.dev/it/avviso-legale/" target="_blank">Avviso legale</a>
-      <a href="https://demo-651.avantio.dev/it/politica-di-privacy/" target="_blank">Politica di Privacy</a>
+      <a href="https://demo-651.avantio.dev/it/condizioni-generali/" target="_blank" rel="noopener noreferrer">Condizioni Generali</a>
+      <a href="https://demo-651.avantio.dev/it/politica-dei-cookies/" target="_blank" rel="noopener noreferrer">Politica dei cookies</a>
+      <a href="https://demo-651.avantio.dev/it/avviso-legale/" target="_blank" rel="noopener noreferrer">Avviso legale</a>
+      <a href="https://demo-651.avantio.dev/it/politica-di-privacy/" target="_blank" rel="noopener noreferrer">Politica di Privacy</a>
     </div>
   </div>
 </footer>

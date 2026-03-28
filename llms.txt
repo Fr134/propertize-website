@@ -1,0 +1,16 @@
+# Propertize
+
+> Propertize S.r.l. is an Italian vacation rental company managing short-term rentals (affitti brevi) across Sardinia, Milan, and Sicily. Based in Milan, properties published on 50+ international platforms.
+
+- [Homepage](https://propertize.it/): Main landing page with destinations, search, and booking
+- [All Properties](https://demo-651.avantio.dev/it/affitti/affitti-affitti-d0/): Browse all vacation rentals
+- [Experiences](https://demo-651.avantio.dev/it/esperienze-sardegna-lombardia/): Culinary and outdoor experiences
+- [Gift Cards](https://demo-651.avantio.dev/it/gift-cards-sardegna-lombardia/): Gift card purchase
+- [About Us](https://demo-651.avantio.dev/it/chi-siamo/): Company information
+- [For Owners](https://demo-651.avantio.dev/it/proprietari/): Property management services
+- [General Conditions](https://demo-651.avantio.dev/it/condizioni-generali/): Booking terms and cancellation policy
+- [Privacy Policy](https://demo-651.avantio.dev/it/politica-di-privacy/): Data protection
+
+## Optional
+
+- [Full content version of this file](https://propertize.it/llms-full.txt): Complete company information, FAQs, services, and owner case studies
